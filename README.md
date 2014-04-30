@@ -1,6 +1,6 @@
 # LexLadiesCode
 
-This is the main website for the Lex Ladies Coding Club in Lexington, KY.
+This is the main website for the Lex Ladies Coding Club in Lexington, KY. To view the site go to http://lexladiescode.github.io/
 
 ## How To Contribute
 
