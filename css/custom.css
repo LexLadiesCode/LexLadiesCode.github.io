@@ -1,3 +1,12 @@
-body{
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+body {
   padding-top: 50px;
+}
+
+time {
+  font-style: italic;
+  color: #999;
 }
