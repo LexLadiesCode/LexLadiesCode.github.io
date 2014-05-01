@@ -5,7 +5,7 @@ This is the main website for the Lex Ladies Coding Club in Lexington, KY. To vie
 ## How to Run
 
 1. `bundle` to install necessary gems, including Jekyll.
-1. `jekyll serve`
+1. `jekyll serve -w`
 1. Visit `http://localhost:4000` in your browser to view the site.
 
 ## How To Contribute
