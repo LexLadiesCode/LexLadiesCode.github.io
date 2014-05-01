@@ -1,3 +1,3 @@
 ## About
 
-All-ladies coding club based in Lexington, Kentucky.
+We are an all-ladies coding club based in Lexington, Kentucky.

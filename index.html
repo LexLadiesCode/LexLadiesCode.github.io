@@ -4,15 +4,52 @@ title: Home
 ---
 
 <div id="home">
-  <div id="about"><a name="about"></a>
+  <section id="about" class="page-section"><a name="about"></a>
     {% markdown about.markdown %}
-  </div>
+  </section>
 
-  <div id="contact"><a name="contact"></a>
+  <section id="projects" class="page-section"><a name="projects"></a>
+    {% markdown projects.markdown %}
+
+    <ul class="projects-list list-unstyled">
+      {% for post in site.categories.projects %}
+        <li>
+          <section class="project">
+            <h3 class="project-name">{{ post.title }}</h3>
+            <div class="project-description">
+              {{ post.content }}
+            </div>
+            <footer class="project-footer">
+              <ul class="list-inline">
+                {% if post.website %}
+                  <li>
+                    <a href="{{ post.website }}">
+                      <i class="fa fa-external-link-square"></i>
+                      Visit web site
+                    </a>
+                  </li>
+                {% endif %}
+                {% if post.github %}
+                  <li>
+                    <a href="{{ post.github }}">
+                      <i class="fa fa-code"></i>
+                      View source
+                    </a>
+                  </li>
+                {% endif %}
+              </ul>
+            </footer>
+          </section>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section id="contact" class="page-section"><a name="contact"></a>
     {% markdown contact.markdown %}
-  </div>
+  </section>
 
-  <div id="updates"><a name="updates"></a>
+  <section id="updates" class="page-section"><a name="updates"></a>
     <h2>Updates</h2>
     <ul class="posts-list list-unstyled">
       {% for post in site.categories.updates limit:5 %}
@@ -26,5 +63,5 @@ title: Home
         </li>
       {% endfor %}
     </ul>
-  </div>
+  </section>
 </div>
