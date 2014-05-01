@@ -2,11 +2,17 @@
 
 This is the main website for the Lex Ladies Coding Club in Lexington, KY. To view the site go to http://lexladiescode.github.io/
 
+## How to Run
+
+1. `bundle` to install necessary gems, including Jekyll.
+1. `jekyll serve`
+1. Visit `http://localhost:4000` in your browser to view the site.
+
 ## How To Contribute
 
 ### Jekyll
 
-This site uses Jekyll to create static HTML pages. You'll need the Jekyll gem to generate pages. Read more about how to install and use it here: http://jekyllrb.com/
+This site uses Jekyll to create static HTML pages. Read more about Jekyll at http://jekyllrb.com/
 
 ### GitHub Pages
 
