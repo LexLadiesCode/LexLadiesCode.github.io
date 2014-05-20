@@ -1,4 +1,4 @@
 name: LexLadiesCode
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 exclude: ["Gemfile", "Gemfile.lock", "README.md", "CNAME"]
