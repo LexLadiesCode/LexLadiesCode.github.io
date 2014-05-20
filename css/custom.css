@@ -1,12 +1,43 @@
-a:hover, a:focus {
-  text-decoration: none;
+html, body {
+	min-height: 100%;
+}
+body {
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #05839F), color-stop(1, #0B4854) );
+	background-image: -o-linear-gradient(bottom, #05839F 0%, #0B4854 100%);
+	background-image: -moz-linear-gradient(bottom, #05839F 0%, #0B4854 100%);
+	background-image: -webkit-linear-gradient(bottom, #05839F 0%, #0B4854 100%);
+	background-image: -ms-linear-gradient(bottom, #05839F 0%, #0B4854 100%);
+	background-image: linear-gradient(to bottom, #05839F 0%, #0B4854 100%);
+	padding-top: 50px;
+	color: #fff;
+}
+a{
+	color: #C7F464;
 }
 
-body {
-  padding-top: 50px;
+a:visited, a:active {
+	color: #77BB11;
 }
+
+a:hover, a:focus {
+	color: #FCFF52;
+	text-decoration: none;
+}
+
 
 time {
   font-style: italic;
   color: #999;
 }
+
+.navbar-fixed-top {
+	background-color: #ff065e;
+}
+
+@media (min-width: 1200px){
+	.container {
+
+		width: 60em;
+	}	
+}
+
