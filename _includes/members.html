@@ -1,0 +1,43 @@
+<section id="members" class="page-section"><a name="members"></a>
+  <h2>Members</h2>
+  <ul class="members-list list-unstyled">
+    {% for post in site.categories.members reversed %}
+      <li>
+        <section class="member">
+          <h3 class="member-name">{{ post.title }}</h3>
+          <div class="member-bio">
+            {{ post.content }}
+          </div>
+          <footer class="member-footer">
+            <ul class="list-inline">
+              {% if post.website %}
+                <li>
+                  <a href="{{ post.website }}">
+                    <i class="fa fa-external-link-square"></i>
+                    Visit web site
+                  </a>
+                </li>
+              {% endif %}
+              {% if post.github %}
+                <li>
+                  <a href="https://github.com/{{ post.github }}">
+                    <i class="fa fa-code"></i>
+                    View Github profile
+                  </a>
+                </li>
+              {% endif %}
+              {% if post.twitter %}
+                <li>
+                  <a href="http://www.twitter.com/{{ post.twitter }}">
+                    <i class="fa fa-twitter"></i>
+                    @{{ post.twitter }}
+                  </a>
+                </li>
+              {% endif %}
+            </ul>
+          </footer>
+        </section>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
