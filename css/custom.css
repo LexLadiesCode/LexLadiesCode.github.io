@@ -1,3 +1,13 @@
+@font-face {
+	font-family: 'OpenSans';
+    src: url('../fonts/opensans-regular-webfont.eot');
+    src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-regular-webfont.woff') format('woff'),
+         url('../fonts/opensans-regular-webfont.ttf') format('truetype'),
+         url('../fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 html, body {
 	min-height: 100%;
 }
@@ -10,7 +20,9 @@ body {
 	background-image: linear-gradient(to bottom, #05839F 0%, #0B4854 100%);
 	padding-top: 50px;
 	color: #fff;
+	font-family: 'OpenSans', Helvetica, Arial, sans-serif;
 }
+
 a{
 	color: #C7F464;
 }
@@ -24,7 +36,9 @@ a:hover, a:focus {
 	text-decoration: none;
 }
 
-
+.project {
+	padding: 0 1.5em;
+}
 time {
   font-style: italic;
   color: #999;
