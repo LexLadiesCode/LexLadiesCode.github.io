@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ashley Greer Wilson
+title: Ashley Wilson
 website: http://www.ashleybot.com/
 github: ashleybot
 ---
