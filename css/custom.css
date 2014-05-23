@@ -1,3 +1,11 @@
+/* Colors
+		Gray #C7F464
+		Light Gray #ff065e
+		Teal #05839F, #0B4854
+		Acid yellow #FCFF52
+		Green apple #77CC22
+*/
+
 @font-face {
 	font-family: 'OpenSans';
     src: url('../fonts/opensans-regular-webfont.eot');
@@ -42,6 +50,10 @@ a:hover, a:focus {
 	text-decoration: none;
 }
 
+.page-section {
+	margin-top: 60px;
+}
+
 .project {
 	padding: 0 2.5em;
 }
@@ -59,4 +71,11 @@ time {
 	.container {
 		width: 60em;
 	}
+}
+
+.site-footer {
+	padding-bottom: 40px;
+	padding-top: 40px;
+	margin-top: 100px;
+
 }
