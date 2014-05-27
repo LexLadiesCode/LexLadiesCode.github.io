@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Kristen Hanny
-website: http://kristen.hanny.com/
+website: http://kristenhanny.com/
 github: helpfulsquash
 twitter: KristenHanny
 ---
