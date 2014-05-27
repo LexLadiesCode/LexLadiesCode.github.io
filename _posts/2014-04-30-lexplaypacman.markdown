@@ -11,4 +11,4 @@ LexPlayPacman was our first project, designed for the
 web application that acts as a score leaderboard for a Pac-Man and Ms. Pac-Man tournament. Games
 were played on arcade machines around Lexington.
 
-The tournament spanned the month of April 2014, and over 80 scores were recorded. Both the library and the project received a lot of great publicity. Congratulations, Eli Riveire Warner, on the success of our first project! 
+The tournament spanned the month of April 2014, and over 80 scores were recorded. Both the library and the project received a lot of great publicity. It was a great team effort for our first project!
