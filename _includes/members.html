@@ -2,16 +2,15 @@
   <h2>Members</h2>
     {% assign column_counter = 0 %}
     {% for post in site.categories.members reversed %}
-        {% if column_counter == 3 %}
-      </div>
-          {% assign column_counter = 0 %}
-        {% endif %}
-        {% if column_counter == 0 %}
-          <div class="row">
-        {% endif %}
-        <div class="col-md-4">
-          {{ column_counter }}
-          {% assign column_counter++ %}
+      {% if column_counter == 3 %}
+        </div>
+        {% assign column_counter = 0 %}
+      {% endif %}
+      {% if column_counter == 0 %}
+        <div class="row">
+      {% endif %}
+      <div class="col-md-4">
+        {% assign column_counter = column_counter | plus: 1 %}
         <section class="member">
           <h3 class="member-name">{{ post.title }}</h3>
           <div class="member-bio">
@@ -47,8 +46,6 @@
           </footer>
         </section>
       </div>
-      {% if column_counter == 2 %}
-      {% endif %}
     {% endfor %}
   </div>
 </section>
