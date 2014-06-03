@@ -47,6 +47,11 @@ a:hover, a:focus {
 	text-decoration: none;
 }
 
+
+img.member-photo {
+	margin-bottom: 10px;
+}
+
 h3.member-name {
   margin-top: 40px;
   margin-bottom: 20px;
