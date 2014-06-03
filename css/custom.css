@@ -61,6 +61,10 @@ h3.project-name {
   margin-top: 0;
 }
 
+#members .row + .row {
+  margin-top: 40px;
+}
+
 .member-photo {
   float: left;
   margin: 0 20px 10px 0;
