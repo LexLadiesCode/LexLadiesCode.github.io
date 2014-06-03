@@ -46,6 +46,11 @@ a:hover, a:focus {
 	text-decoration: none;
 }
 
+img.member-photo {
+  float: left;
+  margin: 5px 20px 10px 0;
+}
+
 .page-section {
 	margin-top: 60px;
 }
