@@ -1,36 +1,47 @@
 <section id="projects" class="page-section"><a name="projects"></a>
   <h2>Projects</h2>
 
-  <ul class="projects-list list-unstyled">
+  <div class="projects">
     {% for post in site.categories.projects %}
-      <li>
-        <section class="project">
-          <h3 class="project-name">{{ post.title }}</h3>
-          <div class="project-description">
-            {{ post.content }}
+      <section class="project">
+        <div class="row">
+          {% if post.screenshot and post.thumbnail %}
+            <div class="col-md-4">
+              <div class="project-thumbnail">
+                <a href="/images/{{ post.screenshot }}" data-title="{{ post.title }}" data-toggle="lightbox">
+                  <img src="/images/{{ post.thumbnail }}" alt="{{ post.title }}">
+                </a>
+              </div>
+            </div>
+          {% endif %}
+          <div class="col-md-8 {% unless post.screenshot and post.thumbnail %}col-md-offset-2{% endunless %}">
+            <h3 class="project-name">{{ post.title }}</h3>
+            <div class="project-description">
+              {{ post.content }}
+            </div>
+            <footer class="project-footer">
+              <ul class="list-inline">
+                {% if post.website %}
+                  <li>
+                    <a href="{{ post.website }}">
+                      <i class="fa fa-external-link-square"></i>
+                      Visit web site
+                    </a>
+                  </li>
+                {% endif %}
+                {% if post.github %}
+                  <li>
+                    <a href="{{ post.github }}">
+                      <i class="fa fa-code"></i>
+                      View source
+                    </a>
+                  </li>
+                {% endif %}
+              </ul>
+            </footer>
           </div>
-          <footer class="project-footer">
-            <ul class="list-inline">
-              {% if post.website %}
-                <li>
-                  <a href="{{ post.website }}">
-                    <i class="fa fa-external-link-square"></i>
-                    Visit web site
-                  </a>
-                </li>
-              {% endif %}
-              {% if post.github %}
-                <li>
-                  <a href="{{ post.github }}">
-                    <i class="fa fa-code"></i>
-                    View source
-                  </a>
-                </li>
-              {% endif %}
-            </ul>
-          </footer>
-        </section>
-      </li>
+        </div>
+      </section>
     {% endfor %}
-  </ul>
+  </div>
 </section>
