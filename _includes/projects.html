@@ -9,7 +9,7 @@
             {% if post.screenshot and post.thumbnail %}
               <div class="col-md-4">
                 <div class="project-thumbnail">
-                  <a href="/images/{{ post.screenshot }}" data-title="{{ post.title }}" data-toggle="lightbox">
+                  <a href="/images/{{ post.screenshot }}" data-title="Screenshot of {{ post.title }}" data-toggle="lightbox">
                     <img src="/images/{{ post.thumbnail }}" alt="{{ post.title }}">
                   </a>
                 </div>

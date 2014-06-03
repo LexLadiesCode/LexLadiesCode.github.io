@@ -72,6 +72,10 @@ h3.project-name {
   background-color: white;
 }
 
+.modal-title {
+  color: #444;
+}
+
 .navbar-default .navbar-nav > li.active > a,
 .navbar-default .navbar-nav > li.active > a:visited,
 .navbar-default .navbar-nav > li.active > a:active {
