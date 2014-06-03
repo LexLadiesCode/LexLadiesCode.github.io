@@ -5,6 +5,9 @@
       <li>
         <section class="member">
           <h3 class="member-name">{{ post.title }}</h3>
+          {% if post.photo %}
+            <img src="/images/{{ post.photo }}" alt="{{ post.title }}" class="member-photo">
+          {% endif %}
           <div class="member-bio">
             {{ post.content }}
           </div>

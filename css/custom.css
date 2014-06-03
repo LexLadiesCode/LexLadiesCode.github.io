@@ -16,17 +16,13 @@
     font-weight: normal;
     font-style: normal;
 }
+
 html, body {
 	min-height: 100%;
 }
 
 body {
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #05839F), color-stop(1, #0B4854) );
-	background-image: -o-linear-gradient(bottom, #05839F 0%, #0B4854 100%);
-	background-image: -moz-linear-gradient(bottom, #05839F 0%, #0B4854 100%);
-	background-image: -webkit-linear-gradient(bottom, #05839F 0%, #0B4854 100%);
-	background-image: -ms-linear-gradient(bottom, #05839F 0%, #0B4854 100%);
-	background-image: linear-gradient(to bottom, #05839F 0%, #0B4854 100%);
+	background-color: #05839F;
 	padding-top: 50px;
 	color: #fff;
 	font-family: 'OpenSans', Helvetica, Arial, sans-serif;
