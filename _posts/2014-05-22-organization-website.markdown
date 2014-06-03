@@ -3,6 +3,8 @@ layout: post
 title: Organization Website
 categories: projects
 github: https://github.com/LexLadiesCode/LexLadiesCode.github.io
+screenshot: screenshot-lexladiescode.png
+thumbnail: thumbnail-lexladiescode.png
 ---
 
 Our current project is the website for this organization, LexLadiesCode!
