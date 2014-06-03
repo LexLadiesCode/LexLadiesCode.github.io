@@ -16,7 +16,11 @@
             <h3 class="member-name">{{ post.title }}</h3>
             {% if post.photo %}
               <div class="member-photo">
-                <img src="/images/{{ post.photo }}" alt="{{ post.title }}">
+                {% if post.photo contains 'http://' %}
+                  <img src="{{ post.photo }}" alt="{{ post.title }}">
+                {% else %}
+                  <img src="/images/{{ post.photo }}" alt="{{ post.title }}">
+                {% endif %}
               </div>
             {% endif %}
             <div class="member-bio">

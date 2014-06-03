@@ -3,6 +3,7 @@ layout: post
 title: Ashley Wilson
 website: http://www.ashleybot.com/
 github: ashleybot
+photo: http://www.gravatar.com/avatar/fd5460bdc6504b7ba0f46b3512f4f36e.png?size=180
 ---
 
 Ashley is a user-centered designer and developer. She gets pumped about HCI research and human learning. Last year she lived in Portugal where she completed a dual-masters in Human-Computer Interaction.
