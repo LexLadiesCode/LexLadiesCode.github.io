@@ -68,17 +68,8 @@ h3.project-name {
   background-color: white;
 }
 
-.navbar-nav>li>a {
-color: #05839F;
-}
-
-.page-header {
-  text-align: center;
-  border-bottom-color: #1092AF;
-}
-
-.page-section {
-	margin-top: 60px;
+.navbar-nav > li > a {
+  color: #05839F;
 }
 
 .project-thumbnail {
@@ -98,10 +89,39 @@ color: #05839F;
 	background-color: #ff065e;
 }
 
-.site-footer {
-  padding-bottom: 40px;
-  padding-top: 40px;
-  margin-top: 100px;
+.page-section {
+  padding: 40px 0;
+}
+
+.page-section > .container > h2 {
+  margin-top: 0;
+}
+
+.page-section#about {
+}
+
+.page-section#projects {
+  background-color: #216777;
+}
+
+.page-section#members {
+  background-color: #025467;
+}
+
+.page-section#contact {
+  background-color: #216777;
+}
+
+.page-section#site-footer {
+  background-color: #216777;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 12px;
+}
+
+#site-title {
+  text-align: center;
+  margin-top: 60px;
 }
 
 time {
