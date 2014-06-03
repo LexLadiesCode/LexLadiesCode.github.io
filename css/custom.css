@@ -72,6 +72,16 @@ h3.project-name {
   background-color: white;
 }
 
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > li.active > a:visited,
+.navbar-default .navbar-nav > li.active > a:active {
+  color: #E60061;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 .navbar-default .navbar-nav > li > a {
   color: #05839F;
 }
@@ -79,11 +89,13 @@ h3.project-name {
 .navbar-default .navbar-nav > li > a:visited,
 .navbar-default .navbar-nav > li > a:active {
 	color: #AAC3C8;
+  background-color: transparent;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
 	color: #E60061;
+  background-color: transparent;
 }
 
 .page-header {

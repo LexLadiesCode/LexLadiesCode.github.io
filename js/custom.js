@@ -14,12 +14,8 @@ $(function() {
     var url = link.attr('href');
     event.preventDefault();
     var area_to_scroll_to = $(url);
-    if (area_to_scroll_to.length < 1) {
-      var name = url.substr(1); // #top-of-page => top-of-page
-      area_to_scroll_to = $('[name="' + name + '"]');
-    }
     var y_offset = area_to_scroll_to.offset().top -
-                   $('.navbar-fixed-top').height();
+                   ($('.navbar-fixed-top').height() / 2);
     $('html, body').animate({scrollTop: y_offset}, 500, function() {
       if (url === '#top-of-page') {
         window.location.hash = '';
@@ -27,6 +23,10 @@ $(function() {
         window.location.hash = url;
       }
     });
+    if (link.parents('.navbar-fixed-top').length > 0) {
+      link.closest('ul.nav').children('li.active').removeClass('active');
+      link.closest('li').addClass('active');
+    }
     return false;
   });
 });
