@@ -1,5 +1,9 @@
 $(function() {
   $('[data-toggle="tooltip"]').tooltip();
+  $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+  });
   $('time').each(function() {
     var time_tag = $(this);
     var time_str = time_tag.text();

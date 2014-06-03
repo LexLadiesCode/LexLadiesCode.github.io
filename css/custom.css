@@ -53,8 +53,12 @@ img.member-photo {
 }
 
 h3.member-name {
-  margin-top: 40px;
+  margin-top: 0;
   margin-bottom: 20px;
+}
+
+h3.project-name {
+  margin-top: 0;
 }
 
 .member-photo {
@@ -91,14 +95,18 @@ color: #05839F;
 .page-section {
 	margin-top: 60px;
 }
-c
-.project {
-	padding: 0 2.5em;
+
+.project-thumbnail {
+  background-color: white;
+  padding: 10px;
 }
 
-time {
-  font-style: italic;
-  color: #999;
+.project-thumbnail img {
+  max-width: 100%;
+}
+
+.projects .project + .project {
+  margin-top: 40px;
 }
 
 .navbar-fixed-top {
@@ -109,7 +117,15 @@ time {
   padding-bottom: 40px;
   padding-top: 40px;
   margin-top: 100px;
+}
 
+time {
+  font-style: italic;
+  color: #999;
+}
+
+ul.members-list > li + li {
+  margin-top: 40px;
 }
 
 @media (max-width: 767px) {
