@@ -47,8 +47,7 @@ a:hover, a:focus {
 }
 
 img.member-photo {
-  float: left;
-  margin: 5px 20px 10px 0;
+	margin-bottom: 10px;
 }
 
 .page-section {

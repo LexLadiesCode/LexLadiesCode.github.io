@@ -1,9 +1,18 @@
 <section id="members" class="page-section"><a name="members"></a>
   <h2>Members</h2>
-  <ul class="members-list list-unstyled">
+    {% assign column_counter = 0 %}
     {% for post in site.categories.members reversed %}
-      <li>
-        <section class="member clearfix">
+
+      {% if column_counter == 3 %}
+        </div>
+        {% assign column_counter = 0 %}
+      {% endif %}
+      {% if column_counter == 0 %}
+        <div class="row">
+      {% endif %}
+      <div class="col-md-4">
+        {% assign column_counter = column_counter | plus: 1 %}
+        <section class="member">
           <h3 class="member-name">{{ post.title }}</h3>
           {% if post.photo %}
             <img src="/images/{{ post.photo }}" alt="{{ post.title }}" class="member-photo">
@@ -40,7 +49,7 @@
             </ul>
           </footer>
         </section>
-      </li>
+      </div>
     {% endfor %}
-  </ul>
+  </div>
 </section>
