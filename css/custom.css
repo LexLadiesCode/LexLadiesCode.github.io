@@ -6,6 +6,7 @@
 		Green apple #77CC22
 */
 
+
 @font-face {
 	font-family: 'OpenSans';
     src: url('../fonts/opensans-regular-webfont.eot');
@@ -46,6 +47,11 @@ a:hover, a:focus {
 	text-decoration: none;
 }
 
+
+img.member-photo {
+	margin-bottom: 10px;
+}
+
 h3.member-name {
   margin-top: 0;
   margin-bottom: 20px;
@@ -60,6 +66,10 @@ h3.project-name {
   margin: 0 20px 10px 0;
   padding: 10px;
   background-color: white;
+}
+
+.navbar-nav>li>a {
+color: #05839F;
 }
 
 .page-header {
@@ -92,7 +102,6 @@ h3.project-name {
   padding-bottom: 40px;
   padding-top: 40px;
   margin-top: 100px;
-
 }
 
 time {
