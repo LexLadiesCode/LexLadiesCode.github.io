@@ -156,8 +156,13 @@ h3.project-name {
 }
 
 #site-title {
-  text-align: center;
-  margin-top: 60px;
+  background-image: url('../images/LLCC_logo_160px.png');
+  background-repeat: no-repeat;
+  line-height: 160px;
+  margin: 60px auto 0px auto;
+  min-height: 160px;
+  padding-left: 188px;
+  width: 440px;
 }
 
 time {
