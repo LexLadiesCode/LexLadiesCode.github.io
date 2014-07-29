@@ -4,10 +4,17 @@ This is the main website for the Lex Ladies Coding Club in Lexington, KY. To vie
 
 ## First-time Setup
 
-[Install Ruby](https://www.ruby-lang.org/en/installation/).
+1. [Install Ruby](https://www.ruby-lang.org/en/installation/). Use RubyInstaller for Windows.
+1. On Windows, also install the [RubyInstaller DevKit](http://rubyinstaller.org/downloads/). Extract it to a folder called DevKit, maybe in your Downloads folder.
+    1. Once you extract the DevKit, open the Command Prompt program and run `cd \Users\your_user_name\Downloads\DevKit`, replacing `your_user_name` with whatever your Windows user name is.
+    1. `ruby dk.rb init`
+    1. `ruby dk.rb install`
+    1. `gem install bundler`
 
 ## How to Run
 
+1. In OS X, open the Terminal app (found under Applications > Utilties). In Windows, open the Command Prompt (type `cmd` in Start Menu search field).
+1. Navigate to where this repository is checked out using the `cd` command in the terminal/prompt. 
 1. `bundle` to install necessary gems, including Jekyll.
 1. `jekyll serve -w`
 1. Visit `http://localhost:4000` in your browser to view the site.
