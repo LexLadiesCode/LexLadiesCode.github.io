@@ -2,6 +2,10 @@
 
 This is the main website for the Lex Ladies Coding Club in Lexington, KY. To view the site go to http://lexladiescode.github.io/
 
+## First-time Setup
+
+[Install Ruby](https://www.ruby-lang.org/en/installation/).
+
 ## How to Run
 
 1. `bundle` to install necessary gems, including Jekyll.
