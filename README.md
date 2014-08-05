@@ -17,7 +17,7 @@ This is the main website for the Lex Ladies Coding Club in Lexington, KY. To vie
 1. In OS X, open the Terminal app (found under Applications > Utilties). In Windows, open the Command Prompt (type `cmd` in Start Menu search field).
 1. Navigate to where this repository is checked out using the `cd` command in the terminal/prompt. For example, in Windows: `cd \Users\your_user_name\Documents\GitHub\LexLadiesCode.github.io`
 1. `bundle` to install necessary gems, including Jekyll.
-1. `jekyll serve -w`
+1. `jekyll serve -w` (If you are using rbenv for ruby version control, do `rbenv exec jekyll serve -w`.)
 1. Visit `http://localhost:4000` in your browser to view the site.
 
 ## How To Contribute
