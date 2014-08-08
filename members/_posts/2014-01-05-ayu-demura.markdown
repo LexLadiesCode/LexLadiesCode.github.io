@@ -2,7 +2,7 @@
 layout: post
 title: Ayu Demura
 github: ayudemura
-photo:
+photo: ayu-snapshot.jpg
 ---
 
-Ayu graduated from [Georgetown College](http://www.georgetowncollege.edu) with full CLEP credit, if you know what I mean.  Currently, she works at [Perceptive Software @ Lexmark](http://www.perceptivesoftware.com/) as Cloud developer.  She is proud mother of two awesomely noisy children.
+Ayu graduated from [Georgetown College](http://www.georgetowncollege.edu) with BS in Computer Science and Information System.  Currently, she works at [Perceptive Software from Lexmark](http://www.perceptivesoftware.com/) as Cloud developer.  She is a proud mother of two awesomely noisy children.
