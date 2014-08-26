@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Haml Intro</title>
+
+    <meta name="description" content="Using Yeoman and Bower to quickly create apps.">
+    <meta name="author" content="Sarah Vessels">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <style type="text/css">
+    .reveal section ol li + li,
+    .reveal section ul li + li {
+      margin-top: 20px;
+    }
+
+    .reveal section p + ol,
+    .reveal section p + ul {
+      margin-top: 20px;
+    }
+
+    .reveal .left {
+      float: left;
+      width: 49%;
+      margin-bottom: 20px;
+    }
+
+    .reveal .left + .right {
+      float: right;
+      width: 49%;
+      margin-bottom: 20px;
+    }
+
+    .reveal .center {
+      width: 49%;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      clear: both;
+    }
+
+    .reveal pre, .reveal code {
+      font-size: 90%;
+    }
+    </style>
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>Intro to Haml</h1>
+          <h3>by <a href="http://3till7.net/">Sarah Vessels</a></h3>
+        </section>
+
+        <section>
+          <h2>What is Haml?</h2>
+          <ul>
+            <li>A markup language for generating HTML</li>
+            <li>Can be used in place of ERB</li>
+            <li>Write Haml, compile it, get HTML</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Why use Haml over ERB?</h2>
+          <ul>
+            <li>Less verbose</li>
+            <li>Don't have to include ending HTML tags like <code>&lt;/p&gt;</code></li>
+            <li>Don't have to include ending Ruby tags like <code>end</code></li>
+            <li>Closer relationship to CSS IDs and classes,<br>e.g., <code>%p.intro</code> produces <code>&lt;p class="intro"&gt;</code><br>which would be styled with <code>.intro { }</code> in CSS</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>How to use Haml</h2>
+          <h3>In a Rails app</h3>
+          <ul>
+            <li>Include a couple gems in Gemfile:<br>
+              <code>gem 'haml', '~> 4.0.5'</code><br>
+              <code>gem 'haml-rails', '~> 0.5.3'</code></li>
+            <li>Rails will compile Haml into HTML for you like it does with ERB</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>How to use Haml</h2>
+          <h3>Elsewhere</h3>
+          <ul>
+            <li>Depends on the app</li>
+            <li>Need something to compile your Haml into HTML files for the browser</li>
+            <li>Can use Haml gem and a tool like Grunt</li>
+          </ul>
+        </section>
+
+        <section class="clearfix">
+          <h2>Haml vs. ERB &rarr; HTML</h2>
+          <div class="left">
+            <p><strong>Haml</strong></p>
+            <pre>%p.intro
+  This is my
+  %strong favorite!
+  - 3.times do
+    %em hi
+    %br</pre>
+          </div>
+          <div class="right">
+            <p><strong>ERB</strong></p>
+            <pre>&lt;p class="intro"&gt;
+  This is my &lt;strong&gt;favorite!&lt;/strong&gt;
+  &lt;% 3.times do %&gt;
+    &lt;em&gt;hi&lt;/em&gt;&lt;br&gt;
+  &lt;% end %&gt;
+&lt;/p&gt;</pre>
+          </div>
+          <div class="center">
+            <p><strong>HTML</strong></p>
+            <pre>&lt;p class="intro"&gt;
+  This is my &lt;strong&gt;favorite!&lt;/strong&gt;
+  &lt;em&gt;hi&lt;/em&gt;&lt;br&gt;
+  &lt;em&gt;hi&lt;/em&gt;&lt;br&gt;
+  &lt;em&gt;hi&lt;/em&gt;&lt;br&gt;
+&lt;/p&gt;</pre>
+          </div>
+        </section>
+
+        <section>
+          <h2>HTML Nesting</h2>
+          <ul>
+            <li>Have to put new HTML elements on new lines</li>
+            <li>
+              Example:
+              <pre>%strong This is %em not okay</pre>
+              <pre>%strong This is
+%em just fine</pre>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Whitespace</h2>
+          <ul>
+            <li>Spaces matter</li>
+            <li>Haml knows how to nest your HTML based on indentation</li>
+            <li>Have to be consistent:<br>if you start indenting a file with two spaces, have to continue using two spaces</li>
+            <li>Won't compile into HTML if your spacing is wrong</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Default HTML Tag</h2>
+          <ul>
+            <li>If you don't specify, Haml creates a <code>&lt;div&gt;</code> tag</li>
+            <li>Specify tag with <code>%htmlTagName</code>, e.g., <code>%p</code> for a paragraph</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>HTML ID Attribute</h2>
+          <ul>
+            <li>Add an ID to an HTML element using <code>#</code></li>
+            <li><code>#my-div-id</code> &rarr;<br>
+              <code>&lt;div id="my-div-id"&gt;&lt;/div&gt;</code></li>
+            <li><code>%table#my-table-id</code> &rarr;<br>
+              <code>&lt;table id="my-table-id"&gt;&lt;/table&gt;</code></li>
+            <li>Can only use <code>#</code> on an element once&mdash;<br>
+              one ID per HTML tag</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>HTML Class Attribute</h2>
+          <ul>
+            <li>Add a class to an HTML element using <code>.</code></li>
+            <li><code>.my-div-class</code> &rarr;<br>
+              <code>&lt;div class="my-div-class"&gt;&lt;/div&gt;</code></li>
+            <li><code>%body#my-body-class</code> &rarr;<br>
+              <code>&lt;body class="my-body-class"&gt;&lt;/body&gt;</code></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Multiple Classes</h2>
+          <ul>
+            <li>Can use <code>.</code> multiple times on the same HTML element</li>
+            <li>
+              <code>.class-the-first.second-class.thirdClass</code> &rarr;<br>
+              <code>&lt;div class="class-the-first second-class thirdClass"&gt;&lt;/div&gt;</code>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>HTML ID and Class At Once</h2>
+          <ul>
+            <li>Can use <code>#</code> and <code>.</code> on the same HTML element</li>
+            <li><code>#crazy_id.wildClass</code> &rarr;<br>
+              <code>&lt;div id="crazy_id" class="wildClass"&gt;&lt;/div&gt;</code></li>
+            <li><code>%p#aNeatID.cool-class</code> &rarr;<br>
+              <code>&lt;p id="aNeatID" class="cool-class"&gt;&lt;/p&gt;</code></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Other HTML Attributes</h2>
+          <ul>
+            <li>Use curly braces</li>
+            <li>Separate attributes with a comma</li>
+            <li>Use a colon after the attribute name</li>
+            <li><code>%input{type: 'text', value: 'Cats'}</code></li>
+            <li>Can also wrap attribute name in quotes and use an arrow instead of a colon:</li>
+            <li><code>%input{'type' => 'text', 'value' => 'Cats'}</code></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Contents of an HTML Element</h2>
+          <ul>
+            <li>Can go after the element on the same line in Haml:
+              <pre>%a{href: '/page1'} My Link</pre></li>
+            <li>Can also go on the next line, indented under the element:
+              <pre>%a{href: '/page1'}
+  My Link</pre></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Ruby Code with Haml</h2>
+          <ul>
+            <li>Preface Ruby code with <code>-</code></li>
+            <li><code>-</code> in Haml is like <code>&lt;%</code> in ERB</li>
+            <li>If you want to output the result of the Ruby code in Haml, use <code>=</code></li>
+            <li><code>=</code> in Haml is like <code>&lt;%=</code> in ERB</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Using Ruby Code in Attributes</h2>
+          <ul>
+            <li><code>%input{type: @my_ruby_variable}</code></li>
+            <li><code>%input{value: 'neat ' + my_ruby_function()}</code></li>
+            <li>Use <code>class</code> and <code>id</code> attributes in curly braces when you need Ruby code for them:<br>
+              <code>%a{class: get_my_css_class(), href: '/page1'}</code>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Questions?</h1>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+      });
+
+    </script>
+
+  </body>
+</html>
