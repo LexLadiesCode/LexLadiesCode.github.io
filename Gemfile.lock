@@ -54,7 +54,6 @@ GEM
     timers (1.1.0)
     toml (0.1.1)
       parslet (~> 1.5.0)
-    wdm (0.1.0)
     yajl-ruby (1.1.0)
 
 PLATFORMS
@@ -63,4 +62,3 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
-  wdm (>= 0.1.0)
