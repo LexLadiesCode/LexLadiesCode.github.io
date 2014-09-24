@@ -107,6 +107,7 @@ h3.project-name {
 .project-thumbnail {
   background-color: white;
   padding: 10px;
+  text-align: center;
 }
 
 .project-thumbnail img {
@@ -171,6 +172,10 @@ ul.members-list > li + li {
 }
 
 @media (max-width: 767px) {
+  .project-thumbnail {
+    margin-bottom: 10px;
+  }
+
   #site-title {
     width: auto;
     padding-left: 0;
