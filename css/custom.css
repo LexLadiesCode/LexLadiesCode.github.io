@@ -47,7 +47,6 @@ a:hover, a:focus {
 	text-decoration: none;
 }
 
-
 img.member-photo {
 	margin-bottom: 10px;
 }
@@ -87,13 +86,10 @@ h3.project-name {
   box-shadow: none;
 }
 
-.navbar-default .navbar-nav > li > a {
-  color: #05839F;
-}
-
+.navbar-default .navbar-nav > li > a,
 .navbar-default .navbar-nav > li > a:visited,
 .navbar-default .navbar-nav > li > a:active {
-	color: #AAC3C8;
+  color: #05839F;
   background-color: transparent;
 }
 
