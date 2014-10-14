@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Intro to Building a Web Game Using JavaScript, HTML, and CSS</title>
+
+    <meta name="description" content="An introduction to building web games using JavaScript, HTML, and CSS using BlicblockJS as an example.">
+    <meta name="author" content="Sarah Vessels">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <style type="text/css">
+    .reveal .caption {
+      font-size: 80%;
+    }
+    .reveal .pull-left {
+      float: left;
+      margin-left: 0;
+      margin-right: 1%;
+      max-width: 47.5%;
+    }
+    .reveal .pull-right,
+    .reveal img.pull-right {
+      float: right;
+      margin-left: 1%;
+      margin-right: 0;
+      max-width: 47.5%;
+    }
+    .reveal .pull-left.small,
+    .reveal .pull-right.small {
+      max-width: 43.5%;
+    }
+    .reveal .pull-left.large,
+    .reveal .pull-right.large {
+      max-width: 51.5%;
+    }
+    .reveal dl dt {
+      font-weight: 700;
+    }
+    .reveal dl dt, .reveal dl dd {
+      line-height: 1.42857143;
+    }
+    .reveal ul li + li,
+    .reveal ul > li > ul {
+      margin-top: 10px;
+    }
+    @media (min-width: 768px) {
+      .reveal dl dt {
+        float: left;
+        width: 8em;
+        overflow: hidden;
+        clear: left;
+        text-align: right;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .reveal dl dd {
+        margin-left: 8.5em;
+        text-align: left;
+      }
+    }
+    </style>
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>Building a Web Game</h1>
+          <h2>Using JavaScript, HTML, and CSS</h2>
+          <h3>by <a href="http://3till7.net/">Sarah Vessels</a></h3>
+        </section>
+
+        <section>
+          <h2>What game are we building?</h2>
+          <ul class="pull-left">
+            <li>Blicblock from The Sims 4</li>
+            <li>Like Tetris meets Bejeweled</li>
+            <li>Falling blocks in different colors</li>
+            <li>Match blocks to make them disappear and score points</li>
+            <li>Blocks fall faster as you score more points</li>
+          </ul>
+          <div class="pull-right">
+            <img src="blicblock-screenshot-1.png" alt="Blicblock in The Sims 4">
+            <p class="caption">My Sim playing Blicblock</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>What are we writing?</h2>
+          <dl>
+            <dt>HTML:</dt>
+            <dd>represent blocks, game board</dd>
+            <dt>JavaScript:</dt>
+            <dd>move blocks, score points, show game info</dd>
+            <dt>CSS:</dt>
+            <dd>style blocks and game board</dd>
+          </dl>
+          <hr>
+          <ul>
+            <li>Write it in an editor like <a href="http://www.sublimetext.com/">Sublime Text</a></li>
+            <li>Play it in your browser, e.g., Chrome</li>
+            <li>Store it in <a href="http://github.com">Github</a> or <a href="http://bitbucket.com">Bitbucket</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>How do you get started?</h2>
+          <ul>
+            <li>Identify <strong>things</strong> in the game, e.g., blocks, a score</li>
+            <li>Figure out how to <strong>make stuff happen</strong>, e.g., drop blocks automatically, increase speed</li>
+            <li>Decide how you will make it <strong>look</strong> like a real game, e.g., images and/or CSS</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Represent Things</h2>
+          <ul>
+            <li>Need to <strong>display</strong> things on the page, like the current score</li>
+            <li>Let the user do stuff, like <strong>move</strong> blocks left and right</li>
+            <li>Things need to <strong>interact</strong>, e.g., when the user makes a match, increment the score and remove the blocks</li>
+            <li>Display things with HTML elements, styled with CSS and added dynamically to the page with JavaScript</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Represent a Block</h2>
+          <ul class="pull-left">
+            <li>Use an HTML <code>&lt;div&gt;</code> tag</li>
+            <li>Add some CSS classes to it to style its position and color</li>
+            <li>Blocks on a game board : points on a positive, 2D graph</li>
+            <li>Use JavaScript to change its class when it moves,<br>e.g., replace <code>pos-0-0</code> with <code>pos-0-1</code></li>
+          </ul>
+          <img src="graph.png" class="pull-right">
+        </section>
+
+        <section>
+          <h2>JavaScript Makes it Dynamic</h2>
+          <ul>
+            <li>For example:
+              <ul>
+                <li>It's easy to make a page using just HTML that has five blocks on it</li>
+                <li>JavaScript lets us have an <em>unknown number</em> of blocks</li>
+              </ul>
+            </li>
+            <li>With JavaScript, say things like:
+              <ul>
+                <li>"every second, add a new block to the page"</li>
+                <li>"if the user makes a match, remove those blocks"</li>
+                <li>"if the user presses &larr;, move block to the left"</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>CSS Makes It Pretty</h2>
+          <div class="pull-left small">
+            <img src="blicblockjs-without-styles.png" alt="Web page with stylesheets disabled">
+            <p class="caption">BlicblockJS without CSS</p>
+          </div>
+          <div class="pull-right large">
+            <img src="blicblockjs-with-styles.png" alt="Web page with stylesheets enabled">
+            <p class="caption">BlicblockJS with CSS</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Use JavaScript Functions</h2>
+          <div class="pull-left">
+            <p>Write a function to:</p>
+            <ul>
+              <li>Encapsulate some code and give it a name</li>
+              <li>Call that same chunk of code multiple times, just by calling its name</li>
+              <li>e.g., <code>drop_block()</code></li>
+              <li>Easier to read a function name and understand than to see several lines of code</li>
+            </ul>
+          </div>
+          <img src="let-me-sum-up.jpg" class="pull-right">
+        </section>
+
+        <section>
+          <h2>JavaScript Lets Us Interact</h2>
+          <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers.setInterval"><code>setInterval</code></a> - run a function every so often,<br>e.g., <code>drop_block()</code></li>
+            <li>Bind a function to user actions like <code>keypress</code>,<br>e.g., run <code>move_left()</code> when the user presses &larr;</li>
+            <li>Remember things about the user, such as their personal high score, using <a href="http://diveintohtml5.info/storage.html"><code>localStorage</code></a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Overview of BlicblockJS</h2>
+          <ul>
+            <li><code>game_loop()</code> function drops blocks, removes matches, increments score</li>
+            <li>JavaScript inserts more HTML into the page to represent new blocks</li>
+            <li><code>setInterval</code> runs <code>game_loop()</code> every few milliseconds</li>
+            <li>JavaScript listens for user to press keys: move blocks, drop current falling block, pause/resume game</li>
+            <li>Functions handle side effects of user doing stuff</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Some Sample Bugs</h2>
+          <dl>
+            <dt>Description:</dt>
+            <dd>Forgot to check if any block was beside falling block when user tried to move</dd>
+            <dt>Result:</dt>
+            <dd>Could keep piling falling block over top of existing blocks&mdash;looked like a single block</dd>
+            <dt>Description:</dt>
+            <dd>To plummet a block, was changing vertical position from 0 to 5, for example, all at once</dd>
+            <dt>Result:</dt>
+            <dd>Blocks immediately disappeared, didn't get to watch last block fall into place</dd>
+          </dl>
+        </section>
+
+        <section>
+          <h2>More Sample Bugs</h2>
+          <dl>
+            <dt>Description:</dt>
+            <dd>Forgot to ignore user keypresses when game was paused</dd>
+            <dt>Result:</dt>
+            <dd>User could keep moving blocks around while paused</dd>
+            <dt>Description:</dt>
+            <dd>Neglected to check how far away a placed block was compared to the falling block</dd>
+            <dt>Result:</dt>
+            <dd>Hit &larr; or &rarr; once, falling block would zoom all the way to the far side</dd>
+          </dl>
+        </section>
+
+        <section>
+          <h2>Summary</h2>
+          <ul>
+            <li>Define what objects your game is made of</li>
+            <li>Represent those objects using HTML</li>
+            <li>Use JavaScript to add and remove HTML, get user input, and manipulate things on the page</li>
+            <li>Use JavaScript functions to make your code more readable</li>
+            <li>Make it look good with CSS</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Links</h2>
+          <ul>
+            <li>BlicblockJS source code:<br><a href="https://github.com/moneypenny/blicblock-js">https://github.com/moneypenny/blicblock-js</a></li>
+            <li>Play BlicblockJS:<br><a href="http://blicblockjs.herokuapp.com/">http://blicblockjs.herokuapp.com</a></li>
+            <li>JavaScript framework BlicblockJS is built with:<br><a href="https://angularjs.org/">https://angularjs.org</a></li>
+            <li>More in-depth presentation on BlicblockJS:<br><a href="http://3till7.net/uploads/2014/10/blicblockjs-knowledge-bomb/">http://3till7.net/uploads/2014/10/blicblockjs-knowledge-bomb</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Questions?</h1>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+      });
+
+    </script>
+
+  </body>
+</html>
