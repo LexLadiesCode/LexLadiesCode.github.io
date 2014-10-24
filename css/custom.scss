@@ -1,49 +1,39 @@
 ---
 ---
 
+/* See lib/bootstrap/_variables.scss for colors, font sizes, etc. */
+
 @import "fonts";
 @import "bootstrap";
 @import "ekko-lightbox";
 
-/* Colors
-		Gray #C7F464
-		Light Gray #ff065e
-		Teal #05839F, #0B4854
-		Acid yellow #FCFF52
-		Green apple #77CC22
-*/
-
 html, body {
-	min-height: 100%;
+  min-height: 100%;
 }
 
 body {
-	background-color: #05839F;
-	padding-top: 50px;
-	color: #fff;
-	font-family: 'OpenSans', Helvetica, Arial, sans-serif;
+  padding-top: 50px;
 }
 
 a {
-	color: #C7F464;
-	-webkit-transition: color 0.1s ease-in-out;
-	-moz-transition: color 0.1s ease-in-out;
-	-ms-transition: color 0.1s ease-in-out;
-	-o-transition: color 0.1s ease-in-out;
-	transition: color 0.1s ease-in-out;
+  -webkit-transition: color 0.1s ease-in-out;
+  -moz-transition: color 0.1s ease-in-out;
+  -ms-transition: color 0.1s ease-in-out;
+  -o-transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
 }
 
 a:visited, a:active {
-	color: #77CC22;
+  color: #77CC22;
 }
 
 a:hover, a:focus {
-	color: #FCFF52;
-	text-decoration: none;
+  color: $link-hover-color;
+  text-decoration: none;
 }
 
 img.member-photo {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 h3.member-name {
@@ -61,43 +51,19 @@ h3.presentation-name {
 }
 
 .member-photo {
-	margin: 0 auto 10px auto;
+  margin: 0 auto 10px auto;
   padding: 10px;
   background-color: white;
-	width: 200px;
-	text-align: center;
+  width: 200px;
+  text-align: center;
 }
 
 .modal-title {
   color: #444;
 }
 
-.navbar-default .navbar-nav > li.active > a,
-.navbar-default .navbar-nav > li.active > a:visited,
-.navbar-default .navbar-nav > li.active > a:active {
-  color: #E60061;
-  background-image: none;
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.navbar-default .navbar-nav > li > a,
-.navbar-default .navbar-nav > li > a:visited,
-.navbar-default .navbar-nav > li > a:active {
-  color: #05839F;
-  background-color: transparent;
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-	color: #E60061;
-  background-color: transparent;
-}
-
 .page-header {
   text-align: center;
-  border-bottom-color: #1092AF;
 }
 
 .project-thumbnail,
@@ -117,10 +83,6 @@ h3.presentation-name {
   margin-top: 40px;
 }
 
-.navbar-fixed-top {
-	background-color: #ff065e;
-}
-
 .page-section {
   padding: 40px 0;
 }
@@ -133,26 +95,26 @@ h3.presentation-name {
 }
 
 .page-section#presentations {
-  background-color: #216777;
+  background-color: $muted-teal;
 }
 
 .page-section#projects {
-  background-color: #025467;
+  background-color: $dark-muted-teal;
 }
 
 .page-section#members {
-  background-color: #216777;
+  background-color: $muted-teal;
 }
 
 .page-section#resources {
-  background-color: #025467;
+  background-color: $dark-muted-teal;
 }
 
 .page-section#contact {
 }
 
 .page-section#site-footer {
-  background-color: #216777;
+  background-color: $muted-teal;
   text-align: center;
   padding-bottom: 20px;
   font-size: 12px;
@@ -199,7 +161,7 @@ ul.members-list > li + li {
 }
 
 @media (min-width: 1200px){
-	.container {
-		width: 60em;
-	}
+  .container {
+    width: 60em;
+  }
 }
