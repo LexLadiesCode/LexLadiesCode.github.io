@@ -16,7 +16,15 @@
               </div>
             {% endif %}
             <div class="col-md-8 {% unless post.screenshot and post.thumbnail %}col-md-offset-2{% endunless %}">
-              <h3 class="project-name">{{ post.title }}</h3>
+              <h3 class="project-name">
+                {% if post.website %}
+                  <a href="{{ post.website }}">{{ post.title }}</a>
+                {% elsif post.github %}
+                  <a href="{{ post.github }}">{{ post.title }}</a>
+                {% else %}
+                  {{ post.title }}
+                {% endif %}
+              </h3>
               <div class="project-description">
                 {{ post.content }}
               </div>
