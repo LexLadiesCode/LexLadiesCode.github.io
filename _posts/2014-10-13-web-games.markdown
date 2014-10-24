@@ -1,0 +1,10 @@
+---
+layout: post
+title: Building a Web Game Using JavaScript, HTML, and CSS
+categories: presentations
+thumbnail: thumbnail-web-games.png
+author: Sarah Vessels
+presentation_url: /presentations/blicblockjs/
+---
+
+How to get started building a browser game using JavaScript, HTML, and CSS.

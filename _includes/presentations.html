@@ -1,0 +1,44 @@
+<section id="presentations" class="page-section">
+  <div class="container">
+    <h2>Presentations</h2>
+
+    <div class="presentations">
+      {% for post in site.categories.presentations %}
+        <section class="presentation">
+          <div class="row">
+            {% if post.thumbnail %}
+              <div class="col-md-4">
+                <div class="presentation-thumbnail">
+                  <a href="{{ post.presentation_url }}">
+                    <img src="/images/{{ post.thumbnail }}" alt="{{ post.title }}">
+                  </a>
+                </div>
+              </div>
+            {% endif %}
+            <div class="col-md-8 {% unless post.thumbnail %}col-md-offset-2{% endunless %}">
+              <h3 class="presentation-name">
+                <a href="{{ post.presentation_url }}">{{ post.title }}</a>
+              </h3>
+              <div class="presentation-description">
+                {{ post.content }}
+              </div>
+              <footer class="presentation-footer">
+                <ul class="list-inline">
+                  {% if post.author %}
+                    <li>
+                      <i class="fa fa-user"></i>
+                      By {{ post.author }}
+                    </li>
+                  {% endif %}
+                  <li>
+                    {{ post.date | date: "%-d %B %Y" }}
+                  </li>
+                </ul>
+              </footer>
+            </div>
+          </div>
+        </section>
+      {% endfor %}
+    </div>
+  </div>
+</section>

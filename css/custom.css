@@ -56,7 +56,8 @@ h3.member-name {
   margin-bottom: 20px;
 }
 
-h3.project-name {
+h3.project-name,
+h3.presentation-name {
   margin-top: 0;
 }
 
@@ -104,17 +105,20 @@ h3.project-name {
   border-bottom-color: #1092AF;
 }
 
-.project-thumbnail {
+.project-thumbnail,
+.presentation-thumbnail {
   background-color: white;
   padding: 10px;
   text-align: center;
 }
 
-.project-thumbnail img {
+.project-thumbnail img,
+.presentation-thumbnail img {
   max-width: 100%;
 }
 
-.projects .project + .project {
+.projects .project + .project,
+.presentations .presentation + .presentation {
   margin-top: 40px;
 }
 
@@ -133,16 +137,23 @@ h3.project-name {
 .page-section#about {
 }
 
-.page-section#projects {
+.page-section#presentations {
   background-color: #216777;
 }
 
+.page-section#projects {
+  background-color: #025467;
+}
+
 .page-section#members {
+  background-color: #216777;
+}
+
+.page-section#resources {
   background-color: #025467;
 }
 
 .page-section#contact {
-  background-color: #216777;
 }
 
 .page-section#site-footer {
