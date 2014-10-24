@@ -69,3 +69,4 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 2.4.0)
+  kramdown (~> 1.4.2)

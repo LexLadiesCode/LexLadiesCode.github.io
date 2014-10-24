@@ -1,4 +1,10 @@
 name: LexLadiesCode
-markdown: redcarpet
+description: "LexLadiesCode is a women's coding club based in Lexington, Kentucky gathered to increase the visibility of and possibilities for women in technology."
+markdown: kramdown
 highlighter: pygments
-exclude: ["Gemfile", "Gemfile.lock", "README.md", "CNAME"]
+exclude: ["Gemfile", "Gemfile.lock", "README.md", "CNAME", "lib"]
+sass:
+    style: compressed # nested|expanded|compact|compressed
+    sass_dir: lib
+paginate: 5 # pagination based on number of posts
+paginate_path: "page/:num"
