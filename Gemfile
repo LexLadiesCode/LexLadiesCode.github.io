@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 require 'rbconfig'
 
-gem 'jekyll'
+gem 'jekyll', '~> 2.4.0'
 
 # For Windows Users
 if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cygwin/i
