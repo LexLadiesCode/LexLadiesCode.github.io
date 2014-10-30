@@ -2,7 +2,7 @@
 layout: post
 title: "Command Line Presentation"
 category: presentations
-thumbnail:
+thumbnail: thumbnail-commandline.png
 author: Summer Smith
 presentation_url: /presentations/command-line-intro
 ---
