@@ -8,7 +8,11 @@
       {% if postStartDate >= curDate %}
         <div class="well">
           <h4 class="subheader">{{ post.date | date: "%B %-d" }} <small>{{ post.start-time }} to {{ post.end-time }}</small></h4>
-          <h3>{{ post.title }} <small><i class="fa fa-map"></i></small></h3>
+          <h3>
+            <a href="https://www.google.com/maps?q={{ post.location }}" title="{{ post.location-title }}" data-toggle="tooltip" data-placement="left">
+              {{ post.title }} <small><i class="fa fa-map-marker"></i> <span class="visible-xs">{{ post.location-title }}</span></small>
+            </a>
+          </h3>
           <p>{{ post.content }}</p>
         </div>
       {% endif %}
