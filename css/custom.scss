@@ -46,6 +46,12 @@ h3.presentation-name {
   margin-top: 0;
 }
 
+h1, h2, h3, h4 {
+  small {
+    color: rgba(#fff,.8);
+  }
+}
+
 #members .row + .row {
   margin-top: 40px;
 }
@@ -92,6 +98,10 @@ h3.presentation-name {
 }
 
 .page-section#about {
+}
+
+.page-section#events {
+  background-color: rgba($muted-teal,.5);
 }
 
 .page-section#presentations {
@@ -163,5 +173,21 @@ ul.members-list > li + li {
 @media (min-width: 1200px){
   .container {
     width: 60em;
+  }
+}
+
+#events {
+  .well {
+    background-color: rgba($dark-muted-teal, .5);
+    border: none;
+    border-left: 3px solid #fff;
+    .subheader {
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    }
+    h3 {
+      padding-top: 0px;
+      margin-top: 0px;
+    }
   }
 }
