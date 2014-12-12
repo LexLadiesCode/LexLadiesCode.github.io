@@ -15,7 +15,7 @@ body {
   padding-top: 50px;
 }
 
-a {
+a, a small {
   -webkit-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out;
@@ -49,6 +49,16 @@ h3.presentation-name {
 h1, h2, h3, h4 {
   small {
     color: rgba(#fff,.8);
+  }
+  a {
+    small {
+      color: darken($link-color, 25%);
+    }
+    &:hover, &:focus {
+      small {
+        color: $link-hover-color;
+      }
+    }
   }
 }
 
