@@ -5,4 +5,4 @@ github: vmarquez0
 photo: vanessa_baby.jpg
 ---
 
-Vanessa came to Lexington for her MA in geography, which she earned in 2013. Recently, she  became mommy to an awesomely sweet baby boy. LexLadiesCode is her first leisure pursuit since becoming a mommy. She is excited to update her very limited and very old programming knowledge with the support of a talented group of ladies.
+Vanessa came to Lexington for her MA in geography, which she earned in 2013. Recently, she  became mommy to a sweet baby boy. LexLadiesCode is her first leisure pursuit since becoming a mommy. She is excited to update her very limited and very old programming knowledge with the support of a talented group of ladies.
