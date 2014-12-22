@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Kristen Hanny
+title: Kristen Willey
 website: http://www.kristenhanny.com/
 github: helpfulsquash
 twitter: KristenHanny
