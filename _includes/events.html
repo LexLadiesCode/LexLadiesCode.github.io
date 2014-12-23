@@ -1,31 +1,41 @@
-<section id="events" class="page-section">
-  <div class="container">
-    <h2>Events</h2>
+{% assign curDate = site.time | date: '%s' %}
 
-    {% assign curDate = site.time | date: '%s' %}
-    {% for post in site.categories.events %}
-      {% assign postStartDate = post.date | date: '%s' %}
-      {% if postStartDate >= curDate %}
-        <div class="well">
-          <h4 class="subheader">
-            {{ post.date | date: "%B %-d" }}
-            <small>
-              {{ post.start-time }} to {{ post.end-time }}
-            </small>
-          </h4>
-          <h3>
-            <a href="https://www.google.com/maps?q={{ post.location }}">
-              {{ post.title }}
+{% for post in site.categories.events %}
+  {% assign postStartDate = post.date | date: '%s' %}
+  {% if postStartDate >= curDate %}
+    {% assign showEvents = true %}
+  {% endif %}
+{% endfor %}
+
+{% if showEvents %}
+  <section id="events" class="page-section">
+    <div class="container">
+      <h2>Events</h2>
+
+      {% for post in site.categories.events %}
+        {% assign postStartDate = post.date | date: '%s' %}
+        {% if postStartDate >= curDate %}
+          <div class="well">
+            <h4 class="subheader">
+              {{ post.date | date: "%B %-d" }}
               <small>
-                at
-                <i class="fa fa-map-marker"></i>
-                {{ post.location-title }}
+                {{ post.start-time }} to {{ post.end-time }}
               </small>
-            </a>
-          </h3>
-          <p>{{ post.content }}</p>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-</section>
+            </h4>
+            <h3>
+              <a href="https://www.google.com/maps?q={{ post.location }}">
+                {{ post.title }}
+                <small>
+                  at
+                  <i class="fa fa-map-marker"></i>
+                  {{ post.location-title }}
+                </small>
+              </a>
+            </h3>
+            <p>{{ post.content }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}
