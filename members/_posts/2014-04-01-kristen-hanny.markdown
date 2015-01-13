@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Kristen Willey
-website: http://www.kristenhanny.com/
+website: http://www.kristenwilley.com/
 github: helpfulsquash
 twitter: KristenHanny
 photo: kristenphoto.jpg
