@@ -1,0 +1,13 @@
+---
+layout: post
+title: kycc-wic.com
+categories: projects
+github: https://github.com/LexLadiesCode/kycc-wic
+website: http://kycc-wic.com/
+screenshot: screenshot-kycc-wic.png
+thumbnail: thumbnail-kycc-wic.png
+---
+
+The Ladies designed and developed a new website for the coolest conference in the area: The Grace Hopper Women in Computing Celebration.
+
+ The conference is April 10-11th, 2015 on BCTC's Newtown Campus. Hope to see you there! 
