@@ -80,6 +80,7 @@ h1, h2, h3, h4 {
 
 .page-header {
   text-align: center;
+  border-bottom: none;
 }
 
 .project-thumbnail,
@@ -122,19 +123,15 @@ h1, h2, h3, h4 {
   background-color: $dark-muted-teal;
 }
 
-.page-section#members {
-  background-color: $muted-teal;
-}
-
 .page-section#resources {
-  background-color: $dark-muted-teal;
+  background-color: $muted-teal;
 }
 
 .page-section#contact {
+  background-color: $dark-muted-teal;
 }
 
 .page-section#site-footer {
-  background-color: $muted-teal;
   text-align: center;
   padding-bottom: 20px;
   font-size: 12px;

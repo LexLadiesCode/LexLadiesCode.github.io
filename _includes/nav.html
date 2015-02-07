@@ -10,15 +10,19 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#top-of-page">About</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#presentations">Presentations</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#members">Members</a></li>
-        <li><a href="#resources">Resources</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li{% if page.url == '/index.html' %} class="active"{% endif %}>
+          <a href="/index.html#top-of-page">About</a>
+        </li>
+        <li><a href="/index.html#events">Events</a></li>
+        <li><a href="/index.html#presentations">Presentations</a></li>
+        <li><a href="/index.html#projects">Projects</a></li>
+        <li{% if page.url == '/members/' %} class="active"{% endif %}>
+          <a href="/members/">Members</a>
+        </li>
+        <li><a href="/index.html#resources">Resources</a></li>
+        <li><a href="/index.html#contact">Contact</a></li>
         {% if site.categories.updates.size > 0 %}
-          <li><a href="#updates">Updates</a></li>
+          <li><a href="/index.html#updates">Updates</a></li>
         {% endif %}
       </ul>
       <ul class="nav navbar-nav navbar-right">
