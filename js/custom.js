@@ -9,9 +9,12 @@ $(function() {
     var time_str = time_tag.text();
     time_tag.text(moment(time_str).fromNow());
   });
-  $('a[href^=#]').click(function(event) {
+  $('a[href^="/index.html#"]').click(function(event) {
     var link = $(this);
-    var url = link.attr('href');
+    var url = link.attr('href').replace(/^\/index.html/, '');
+    if (window.location.href.indexOf('/members') > -1) {
+      return true;
+    }
     event.preventDefault();
     var area_to_scroll_to = $(url);
     var y_offset = area_to_scroll_to.offset().top -
