@@ -8,3 +8,6 @@ sass:
     sass_dir: lib
 paginate: 5 # pagination based on number of posts
 paginate_path: "page/:num"
+
+# See http://jekyllrb.com/docs/permalinks/
+permalink: /:year/:title/index.html
