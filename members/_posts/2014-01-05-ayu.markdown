@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ayu Demura
+title: Ayu
 github: ayudemura
 photo: ayu-snapshot.jpg
 ---

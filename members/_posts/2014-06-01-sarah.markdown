@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Sarah Vessels
-website: http://www.sarah-vessels.com/
-github: moneypenny
+title: Sarah
+website: http://www.sarahvessels.com/
+github: cheshire137
 twitter: cheshire137
 photo: sarah-scarf-photo.jpg
 ---

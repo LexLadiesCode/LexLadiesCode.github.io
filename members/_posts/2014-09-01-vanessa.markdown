@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vanessa Marquez
+title: Vanessa
 github: vmarquez0
 photo: vanessa_baby.jpg
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tanzi Merritt
+title: Tanzi
 github: tanzimerritt
 twitter: tanzidawn
 photo: tanziphoto.jpg

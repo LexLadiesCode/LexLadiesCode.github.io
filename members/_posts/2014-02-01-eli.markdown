@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Eli Riveire Warner
+title: Eli
 website: http://eliriveirewarner.com/
 github: eliriveire
 twitter: eli_brarian

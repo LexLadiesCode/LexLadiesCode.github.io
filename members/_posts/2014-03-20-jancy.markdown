@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jancy Bonewits
+title: Jancy
 github: jbonewits
 photo: jancy-snapshot.jpg
 ---
