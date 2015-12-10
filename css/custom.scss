@@ -32,16 +32,6 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
-img.member-photo {
-  margin-bottom: 10px;
-}
-
-h3.member-name {
-  margin-top: 0;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
 h3.project-name,
 h3.presentation-name {
   margin-top: 0;
@@ -61,18 +51,6 @@ h1, h2, h3, h4 {
       }
     }
   }
-}
-
-#members .row + .row {
-  margin-top: 40px;
-}
-
-.member-photo {
-  margin: 0 auto 10px auto;
-  padding: 10px;
-  background-color: white;
-  width: 200px;
-  text-align: center;
 }
 
 .modal-title {
@@ -190,10 +168,12 @@ ul.members-list > li + li {
     background-color: rgba($dark-muted-teal, .5);
     border: none;
     border-left: 3px solid #fff;
+
     .subheader {
       padding-bottom: 0px;
       margin-bottom: 0px;
     }
+
     h3 {
       padding-top: 0px;
       margin-top: 0px;
