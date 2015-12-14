@@ -1,8 +1,0 @@
----
-layout: post
-title: Jancy
-github: jbonewits
-photo: jancy-snapshot.jpg
----
-
-Jancy graduated from [Transylvania University](http://www.transy.edu/) with BA in Computer Science and minor in German.  Currently, she works at [Perceptive Software from Lexmark](http://www.perceptivesoftware.com/) as a Project Manager.  She got involved with LexLadiesCode because she wants to dust off her computer science degree and get back into development.
